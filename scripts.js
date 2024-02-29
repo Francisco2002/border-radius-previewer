@@ -1,7 +1,14 @@
 const borderTLeft = document.getElementById("border-top-left");
+const borderTLeftUnit = document.getElementById("border-top-left-unit");
+
 const borderTRight = document.getElementById("border-top-right");
+const borderTRightUnit = document.getElementById("border-top-right-unit");
+
 const borderBLeft = document.getElementById("border-bottom-left");
+const borderBLeftUnit = document.getElementById("border-bottom-left-unit");
+
 const borderBRight = document.getElementById("border-bottom-right");
+const borderBRightUnit = document.getElementById("border-bottom-right-unit");
 
 const target = document.getElementById("target");
 
@@ -17,9 +24,22 @@ borderTLeft.addEventListener("input", e => {
     const value = e.target.value;
 
     if(value) {
-        target.style.borderTopLeftRadius = value + "px";
+        target.style.borderTopLeftRadius = value + borderTLeftUnit.value;
         updateResult();
     }
+})
+
+borderTLeftUnit.addEventListener("change", e => {
+    e.preventDefault();
+
+    const value = borderTLeft.value;
+
+    if(value) {
+        target.style.borderTopLeftRadius = value + e.target.value;
+        updateResult();
+    }
+
+    updateResult();
 })
 
 borderTRight.addEventListener("input", e => {
@@ -27,9 +47,22 @@ borderTRight.addEventListener("input", e => {
     const value = e.target.value;
 
     if(value) {
-        target.style.borderTopRightRadius = value + "px";
+        target.style.borderTopRightRadius = value + borderTRightUnit.value;
         updateResult();
     }
+})
+
+borderTRightUnit.addEventListener("change", e => {
+    e.preventDefault();
+
+    const value = borderTRight.value;
+
+    if(value) {
+        target.style.borderTopRightRadius = value + e.target.value;
+        updateResult();
+    }
+
+    updateResult();
 })
 
 borderBLeft.addEventListener("input", e => {
@@ -37,7 +70,17 @@ borderBLeft.addEventListener("input", e => {
     const value = e.target.value;
 
     if(value) {
-        target.style.borderBottomLeftRadius = value + "px";
+        target.style.borderBottomLeftRadius = value + borderBLeftUnit.value;
+        updateResult();
+    }
+})
+
+borderBLeftUnit.addEventListener("input", e => {
+    e.preventDefault();
+    const value = borderBLeft.value;
+
+    if(value) {
+        target.style.borderBottomLeftRadius = value + e.target.value;
         updateResult();
     }
 })
@@ -47,16 +90,26 @@ borderBRight.addEventListener("input", e => {
     const value = e.target.value;
 
     if(value) {
-        target.style.borderBottomRightRadius = value + "px";
+        target.style.borderBottomRightRadius = value + borderBRightUnit.value;
+        updateResult();
+    }
+})
+
+borderBRightUnit.addEventListener("input", e => {
+    e.preventDefault();
+    const value = borderBRight.value;
+
+    if(value) {
+        target.style.borderBottomRightRadius = value + e.target.value;
         updateResult();
     }
 })
 
 function updateResult() {
-    result.innerHTML = "border-top-left-radius: " + borderTLeft.value +"px;<br/>";
-    result.innerHTML += "border-top-right-radius: " + borderTRight.value + "px;<br/>";
-    result.innerHTML += "border-bottom-left-radius: " + borderBLeft.value + "px;<br/>";
-    result.innerHTML += "border-bottom-right-radius: " + borderBRight.value + "px;<br/>";
+    result.innerHTML = "border-top-left-radius: " + borderTLeft.value + borderTLeftUnit.value + ";<br/>";
+    result.innerHTML += "border-top-right-radius: " + borderTRight.value + borderTRightUnit.value + ";<br/>";
+    result.innerHTML += "border-bottom-left-radius: " + borderBLeft.value + borderBLeftUnit.value + ";<br/>";
+    result.innerHTML += "border-bottom-right-radius: " + borderBRight.value + borderBRightUnit.value + ";<br/>";
 }
 
 btnCopy.addEventListener("click", () => {

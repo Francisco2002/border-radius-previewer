@@ -12,10 +12,37 @@
             <div id="target"></div>
 
             <div class="control">
-                <input id="border-top-left" type="number" min="0" placeholder="Borda Superior Esquerda" value="0" />
-                <input id="border-top-right" type="number" min="0" placeholder="Borda Superior Direita" value="0" />
-                <input id="border-bottom-left" type="number" min="0" placeholder="Borda Inferior Esquerda" value="0" />
-                <input id="border-bottom-right" type="number" min="0" placeholder="Borda Inferior Direita" value="0" />
+                <div class="field">
+                    <input id="border-top-left" type="number" min="0" placeholder="Borda Superior Esquerda" value="0" />
+                    <select id="border-top-left-unit">
+                        <option value="px">px</option>
+                        <option value="%">%</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <input id="border-top-right" type="number" min="0" placeholder="Borda Superior Direita" value="0" />
+                    <select id="border-top-right-unit">
+                        <option value="px">px</option>
+                        <option value="%">%</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <input id="border-bottom-left" type="number" min="0" placeholder="Borda Inferior Esquerda" value="0" />
+                    <select id="border-bottom-left-unit">
+                        <option value="px">px</option>
+                        <option value="%">%</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <input id="border-bottom-right" type="number" min="0" placeholder="Borda Inferior Direita" value="0" />
+                    <select id="border-bottom-right-unit">
+                        <option value="px">px</option>
+                        <option value="%">%</option>
+                    </select>
+                </div>
             </div>
         </div>
 

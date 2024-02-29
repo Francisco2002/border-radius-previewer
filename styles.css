@@ -31,7 +31,16 @@
     margin-left: 20px;
 }
 
-.control input {
+.field {
+    display: flex;
+    flex-direction: row;
+}
+
+.field select {
+    margin-left: 5px;
+}
+
+.control input, select {
     padding: 5px 10px;
     border-radius: 5px;
     outline: none;
@@ -39,7 +48,7 @@
     background-color: rgba(232, 215, 169, .1);
 }
 
-.control input + input {
+.control .field + .field {
     margin-top: 20px;
 }
 
