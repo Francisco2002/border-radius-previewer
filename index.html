@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border-Radius Previewer</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="content">
+        <div class="experimental-box">
+            <div id="target"></div>
+
+            <div class="control">
+                <input id="border-top-left" type="number" min="0" placeholder="Borda Superior Esquerda" value="0" />
+                <input id="border-top-right" type="number" min="0" placeholder="Borda Superior Direita" value="0" />
+                <input id="border-bottom-left" type="number" min="0" placeholder="Borda Inferior Esquerda" value="0" />
+                <input id="border-bottom-right" type="number" min="0" placeholder="Borda Inferior Direita" value="0" />
+            </div>
+        </div>
+
+        <div class="result-box">
+            <button id="btn-copy">Copiar</button>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    border: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8d7a9;
+}
+
+.experimental-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.control input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #000;
+    background-color: rgba(232, 215, 169, .1);
+}
+
+.control input + input {
+    margin-top: 20px;
+}
+
+#target {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #6b666d;
+}
+
+.result-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 30px;
+}
+
+#btn-copy {
+    background-color: #8eaa94;
+    color: #f4f4f4;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#result {
+    border: 1px solid #000;
+    font-family: "Fira Code";
+    padding: 10px;
+}
